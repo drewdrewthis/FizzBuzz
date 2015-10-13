@@ -24,6 +24,8 @@ function execute(n){
 
 document.getElementById('Submit').addEventListener('click', function(e){
 	e.preventDefault();
+	//Reset Output
+	document.getElementById("output").innerHTML="";
 	var userinput = input.value;
 	var number = parseInt(userinput);
 	console.log("User Input: " + userinput);
