@@ -30,8 +30,8 @@ document.getElementById('Submit').addEventListener('click', function(e){
 	var number = parseInt(userinput);
 	console.log("User Input: " + userinput);
 	console.debug("FizzBuzz Input Number: " + number);
-	if(number)
-		execute(number);
+	if(!number || (userinput % 1 != 0))
+		create("Oops - that's not an integer!");
 	else
-		create("Oops - that's not a number!");
+		execute(number);
 });
