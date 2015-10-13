@@ -1,8 +1,10 @@
-function execute(n){
-	function create(text) {
+function create(text) {
 		var node = document.createTextNode(text);   
 		document.getElementById("output").appendChild(node);
-	};
+};
+
+function execute(n){
+	
 
 	for(var i=1;i<=n;i++) {
 
@@ -26,5 +28,8 @@ document.getElementById('Submit').addEventListener('click', function(e){
 	var number = parseInt(userinput);
 	console.log("User Input: " + userinput);
 	console.debug("FizzBuzz Input Number: " + number);
-	execute(number);
+	if(number)
+		execute(number);
+	else
+		create("Oops - that's not a number!");
 });
